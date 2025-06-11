@@ -28,29 +28,30 @@
 
 ## 📁 Project Structure
 
+~~~
 learning-space/
 │
-├── client/ # React frontend
-│ ├── public/
-│ ├── src/
-│ ├── package.json
-│ └── ...
+├── client/                # React frontend
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── ...
 │
-├── server/ # Express backend with EJS templates
-│ ├── controllers/ # Route logic
-│ ├── models/ # Database models
-│ ├── routes/ # Express routes
-│ ├── views/ # EJS templates
-│ ├── app.js # Express app entry point
-│ ├── package.json
-│ └── ...
+├── server/                # Express backend with EJS templates
+│   ├── controllers/       # Route logic
+│   ├── models/            # Database models
+│   ├── routes/            # Express routes
+│   ├── views/             # EJS templates
+│   ├── app.js             # Express app entry point
+│   ├── package.json
+│   └── ...
 │
-├── books/ # Folder for books files (ignored by Git)
-├── stor/ # Folder for books files (ignored by Git)
-├── .env # Environment variables (ignored)
+├── books/                 # Folder for books files (ignored by Git)
+├── stor/                  # Another ignored folder (e.g., storage)
+├── .env                   # Environment variables (ignored)
 ├── .gitignore
 ├── README.md
-└── package.json # 
----
+└── package.json           # (optional, if root dependencies exist)
+~~~
 
 Let me know if you'd like to include database schema setup or sample screenshots!
