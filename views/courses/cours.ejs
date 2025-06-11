@@ -1,0 +1,60 @@
+<%- include("../components/header.ejs") %>
+    <%- include("../components/navbar.ejs") %>
+
+
+    <section class="sec-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+             
+            <h2 class="page-title"><%= cours.name %></h2>
+            
+       
+            <div class="dropdown">
+                <button class="btn btn-secondary float-end act-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"  >  actions </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  href="/courses/<%= cours.id %>/new">new Lecture</a></li>
+                  <li><a class="dropdown-item" href="#">Cours update</a></li>
+                  <li><a class="dropdown-item" href="#">Cours delete  </a></li>
+                </ul>
+              </div>
+
+              
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><%= cours.name %></li>
+                </ol>
+              </nav>
+              <hr>
+              <p class="create_datum"> <i class="fas fa-info-circle    "></i> <span class="  bold">Last updated</span> <%= moment( cours.updatedAt).format(' Do MMMM YYYY, HH:mm:ss ')  %></p>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container">
+        <div class="row">
+      
+            <div class="col-12">
+               
+                     <% var i =1; for(let c of cours.contents){%> 
+                        
+                <div class="topic_line">
+                    <a href="/courses/<%= cours.id %>/<%= c.id %>"><h2><%= i++ %> - <%= c.title %></h2></a> 
+                 </div>
+
+                     <% } %>   
+              
+                
+            </div> 
+
+ 
+            
+        </div>
+    </section>
+ 
+         <%- include("../components/footer.ejs") %>

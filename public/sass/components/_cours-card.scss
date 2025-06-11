@@ -1,0 +1,46 @@
+// .cours-card{
+//     background: #ffffff;
+//     border: none;
+//     border-bottom: 4px solid #ad57d4;
+//     padding: 20px;
+//     border-bottom-left-radius: 0;
+//     border-bottom-right-radius: 0;
+//     box-shadow: -1px 3px 24px rgb(119 107 107 / 32%);
+//     text-decoration: none;
+//     margin-top: 30px;
+//     font-family: "Rubik";
+//     height: 315px;
+//     overflow: hidden;
+//     display: inline-block;
+//     width: 100%;
+//     img{
+//         height: 222px;
+//     }
+
+// }
+
+
+
+.cours-card{
+    background: #ffffff; 
+    border: none;
+    padding: 7px 10px;
+    text-decoration: none;
+    margin-top: 23px;
+    font-family: "Rubik";
+    height: 227px;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    transition: all .4s;
+    &:hover{
+        box-shadow: -1px 3px 24px rgb(119 107 107 / 32%);
+    }
+    img{
+        height: 160px;
+        border: 1px solid #000;
+        border-radius: 0;
+    }
+
+}

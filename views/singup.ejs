@@ -1,0 +1,42 @@
+<%- include("components/header.ejs") %>
+
+
+
+<div class="card auth-card">
+    <div class="title">Sing Up</div>
+    <img class="card-img-top" src="/img/logo.png"    alt="">
+
+    <form class="card-body" method="post" action="/auth/singup">
+ 
+
+
+   
+ 
+
+        <div class="form-group"> 
+          <i class="fas fa-user    "></i>
+          <input type="text" name="mail" id="" class="form-control" placeholder="email@exemple.com" aria-describedby="helpId">
+          <!-- <small id="helpId" class="text-muted">Help text</small> -->
+        </div>
+
+
+        <div class="form-group"> 
+            <i class="fas fa-lock    "></i>
+            <input type="password" name="password" id="" class="form-control" placeholder="password" aria-describedby="helpId">
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+ 
+  
+
+          <button type="submit" class="  sbmt  ">create new Account</button>
+          <div class="links">
+            <a class="" href="/auth/login">Log In</a>
+ 
+          </div>
+
+    </form>
+</div>
+
+
+
+ <%- include("components/footer.ejs") %>

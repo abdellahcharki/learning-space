@@ -1,0 +1,39 @@
+<%- include("components/header.ejs") %>
+
+
+
+<div class="card auth-card">
+    <div class="title">Log In</div>
+    <img class="card-img-top" src="/img/logo.png"    alt="">
+    <form class="card-body" method="post" action="/auth/login">
+
+        <div class="form-group">
+          <i class="fas fa-user    "></i>
+          <input type="email" name="mail" id="" class="form-control" placeholder="username" aria-describedby="helpId">
+          <!-- <small id="helpId" class="text-muted">Help text</small> -->
+        </div>
+
+        <div class="form-group"> 
+            <i class="fas fa-lock    "></i>
+            <input type="password" name="password" id="" class="form-control" placeholder="password" aria-describedby="helpId">
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+              keep me conect
+            </label>
+          </div>
+          <button type="submit" class="  sbmt  ">Submit</button>
+          <div class="links">
+            <a class="" href="/auth/singup">Sing up</a>
+            <a class="float-end" href="#">forget password ?</a>
+
+          </div>
+
+    </form>
+</div>
+
+
+
+ <%- include("components/footer.ejs") %>

@@ -1,0 +1,116 @@
+
+.xx-card-wraper.card  {
+    background-color: transparent !important;
+    border: none;
+    
+    position: relative;
+
+    .slick-arrow-projects{
+        width: 50px;
+        border: none;
+        background: #b976769c;
+        height: 50px;
+        position: absolute;
+        top: 40%;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 40px;
+        line-height: 1px;
+        &.slick-next{
+            right: -50px;
+        }
+        &.slick-prev{
+            left: -50px;
+        }
+    }
+
+
+
+}
+
+
+
+.x-card{
+    margin-bottom: 20px;
+    border: 2px dashed #ddd;
+    padding: 18px ;
+    font-size: 18px;
+    font-family: Inconsolata;
+    &.blgrid{
+        background: linear-gradient(to right bottom, #5b6a7f, #45536f, #313d5e, #20284d, #11133b);
+        border-radius: 15px;
+        border-style: solid !important;
+        transition: all .5s;
+        margin-right: 6px;
+    
+        &:hover{
+            box-shadow: 10px 10px 0px 5px #131935;
+            
+            transform: rotate(-3deg);
+        }
+    }
+    .repo-link{
+        color: $orang;
+        text-decoration: none;
+        font-size: 27px;
+        margin-bottom: 18px;
+        display: block;
+        font-weight: 600;
+    }
+    .tech, .p-link{
+        font-size: 16px;
+    }
+    .tech{
+        color: #b2c4ce;
+        margin-right: 20px;
+        position: relative;
+        &:last-of-type::after{
+            content: unset;
+        }
+         &::after {
+          
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: #bdb7c5;
+            right: -17px;
+            position: absolute;
+            border-radius: 10px;
+            bottom: 5px;
+        }
+    }
+
+    .p-link{
+        color: #b2c4ce;
+        float: right;
+        margin-right: 30px;
+        text-decoration: none;
+        position: relative;
+        &:first-of-type{
+            margin: 0;
+            &::after{
+                content: unset;
+            }
+        }
+        &::after{
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: #bdb7c5;
+            right: -17px;
+            position: absolute;
+            border-radius: 10px;
+            bottom: 7px;
+        }
+        &:hover{
+            border-bottom: 2px dashed #b2c4ce;
+        }
+    }
+    &:first-of-type{
+        border-top: 2px dashed #ddd;
+
+    }
+
+}
+
+ 

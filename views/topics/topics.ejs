@@ -1,0 +1,42 @@
+<%- include("../components/header.ejs") %>
+    <%- include("../components/navbar.ejs") %>
+
+    <section class="sec-header" style="background-color: #647683;">
+        <div class="container">
+            <div class="col-12">
+          
+                <h2 class="page-title">Conversation Topics</h2>
+                <a href="/topics/new" class="btn act-btn float-end">new Course</a>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                       <li class="breadcrumb-item active" aria-current="page">My Topics</li>
+                    </ol>
+ 
+                  </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <div class="row">
+
+                <% for(let t of topics){ %>
+                    <div class="col-12 topic_line">
+                        <a class="" href="/topics/<%= t.id %>">
+                           
+                                <h2  ><%= t.title %></h2>
+                             
+                        </a>
+                    </div>
+        
+    
+                <% } %>
+
+
+
+        </div>
+    </section>
+ 
+ <%- include("../components/footer.ejs") %>

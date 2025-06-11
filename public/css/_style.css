@@ -1,0 +1,68 @@
+body{
+    background-color:#ffe2e2;
+    background-size: cover;
+    padding-top: 60px;
+}
+nav{
+    background: #ffffff;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.btn,input{
+    box-shadow: none !important;
+}
+
+input{
+    border-radius: 3px !important;
+}
+
+.traject{
+    width: 100%;
+    padding: 10px 200px; 
+}
+
+.traject ul{
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    border-left: 6px dashed #2d203c;
+    
+    padding: 10px 0 20px 50px;
+    position: relative;
+}
+
+
+
+.traject ul li{
+    background: #ddd;
+    padding: 10px 0 10px  20px;
+    margin-top: 10px; 
+    position: relative;
+}
+
+.traject ul li::after{
+    content: "\f024";
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    left: -46px;
+    /* border-left: 10px solid #ddd; */
+    top: 0px;
+    background: #dddddd;
+    text-align: center;
+    line-height: 2.3;
+    font-size: 20px;
+    font-family: "Font Awesome 5 Free";
+    border-radius: -20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+}
+
+
+
+.card-search{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}

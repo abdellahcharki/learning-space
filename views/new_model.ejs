@@ -1,0 +1,120 @@
+<%- include("components/header.ejs") %>
+    <%- include("components/navbar.ejs") %>
+    <style>
+        .ce-block__content,
+        .ce-toolbar__content {
+            max-width: unset;
+
+        }
+
+        #editor {
+            padding: 20px 60px;
+        }
+    </style>
+
+        <section class="container">
+            <form action="/studium/modulangebot" method="post" class="row">
+                <div class="col-12">
+                    <h2 class="mt-3">Modulangebot</h2>
+                    <button type="submit" class="btn act-btn float-end">save</button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"><i class="fas fa-home    "></i></a></li>
+                 
+                            <li class="breadcrumb-item"><a href="/courses">Modulangebot</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">neu</li>
+                        </ol>
+                    </nav>
+                    <hr />
+               
+                </div>
+    
+                <div class="col-12">
+    
+                    <div class="filter-fg w-100">
+                        <label style="width: 200px;">No.</label>
+                        <input  class="form-control" name="no" placeholder="10-xxx-xxxx" type="text">
+                    </div>
+    
+                    <div class="filter-fg mt-4 w-100">
+                        <label style="width: 200px;">Name</label>
+                        <input  class="form-control" name="name" placeholder="name der Module" type="text">
+                    </div>
+    
+                 
+                    <div class="filter-fg mt-4 w-100">
+                        <label style="width: 200px;">credits (LP)</label>
+                        <input  class="form-control" name="credits" placeholder="5" type="text">
+                    </div>
+    
+    
+                    <div class="filter-fg is-select mt-4 w-100">
+                        <label style="width: 200px;">Berich</label>
+                        <select class="form-control" name="bereicheId" id="">
+                            <% for( let b of beriche){ %>
+                            <option value="<%= b.id %>"><%= b.bereich %> </option>
+                            <% } %>
+                           
+                             
+                        </select>
+                       
+                    </div>
+    
+    
+    
+    
+                    <div class="filter-fg is-select mt-4 w-100">
+                        <label style="width: 200px;">Semiseter</label>
+                        <select class="form-control" name="semisterId" id="">
+                            <% for( let s of semister){ %>
+                            <option value="<%= s.id %>"> <%= s.semister %> </option>
+                            <% } %>
+                           
+                             
+                        </select>
+                       
+                    </div>
+    
+                    <div class="filter-fg mt-4 w-100">
+                        <label style="width: 200px;">Beschreibung</label>
+                        <div class="form-control" id="editor"></div>
+                        <input type="hidden" id="body" name="beschreibung">
+                    </div>
+    
+    
+    
+                </div>
+            </form>
+        </section>
+
+
+
+
+
+
+
+        <%- include("components/footer.ejs") %>
+
+        
+        <script>
+
+
+            const editor = new EditorJS({
+                holder: "editor",
+                placeholder: 'Let`s write an awesome story!',
+                tools: editorTools ,
+                onChange: (api, event) => {
+                    editor.save().then((data) => {
+                    document.getElementById("body").value = String(JSON.stringify(data))  ;
+                  
+                })
+
+                    }
+            });
+
+           
+
+        
+
+
+        </script>

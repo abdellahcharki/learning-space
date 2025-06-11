@@ -1,0 +1,27 @@
+<%- include("components/header.ejs") %>
+    <%- include("components/navbar.ejs") %>
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-title">My Files</h2>
+                <a href="/topics/new" class="btn act-btn float-end">new Todo</a>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                       <li class="breadcrumb-item active" aria-current="page">My Files</li>
+                    </ol>
+                  </nav>
+                  <hr>
+            </div>
+
+            <div class="col-12  ">
+                <div class="files-nav">
+                    <button><i class="fas fa-plus    "></i></button>
+                </div>
+  <div id="root"></div>
+
+            </div>
+        </div>
+    </section>
+ 
+ <%- include("components/footer.ejs") %>

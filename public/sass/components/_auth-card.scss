@@ -1,0 +1,77 @@
+.auth-card{
+    width: 498px;
+    padding: 30px;
+    margin: auto;
+    border: none;
+    box-shadow: 0px 0px 34px 0px #41333359;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #2e458a;
+    .title{
+        position: absolute;
+        background: #2e458a;
+        padding: 9px;
+        color: #fff;
+        width: 176px;
+        text-align: center;
+        height: 40px;
+        line-height: 1;
+        transform: rotate(-36deg);
+        left: -30px;
+        top: 16px;
+        font-size: 20px;
+
+    }
+    img{
+        height: 80px;
+        width: 262px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 38px;
+    }
+    .form-group{
+        position: relative;
+        i{
+            position: absolute;
+            left: 21px;
+            bottom: 16px;
+            color: #4f4141;
+        }
+        label{
+            display: block;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        input.form-control{
+            background: #e0f8ff;
+            border: none;
+            padding: 14px 0 14px 54px;
+            border-radius: 39px;
+        }
+       
+    }
+    .form-check{
+        margin-top: 25px;
+        padding-left: 42px;
+        margin-bottom: 32px;
+    }
+    .sbmt{
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        border: none;
+        padding: 14px;
+        background: #2e458a;
+        border-radius: 101px;
+        color: #fff;
+    }
+    .links{
+        margin-top: 50px;
+        a{
+            color: #957878;
+            font-size: 13px;
+            text-decoration: none;
+        }
+    }
+
+}

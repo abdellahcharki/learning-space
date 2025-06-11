@@ -1,0 +1,19 @@
+.topic_line{
+    margin-top: 25px;
+    font-family:    Rubik ;
+    a{
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 2px  dashed transparent;
+        &:hover{
+             border-bottom: 2px  dashed #006CAC;
+        }
+        h2{
+            
+            color: #006CAC;
+            font-size: 24px;
+            font-weight: 600;
+            
+        }
+    }
+}

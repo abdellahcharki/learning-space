@@ -1,0 +1,191 @@
+.section-title{
+    color: #000000;
+    position: relative;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-family: $title_font;
+    font-weight: 700;
+    padding: 0 7px;
+    display: inline-block;
+    &+a{
+        text-decoration: none;
+        color: #fff;
+        background: #2a223b;
+        padding: 7px 15px;
+        border-radius: 10px;
+        margin-top: 32px;
+    }
+    span{
+        font-weight: 200;
+    font-size: 31px;
+    }
+ 
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #e4a0ff;
+        height: 22px;
+        bottom: 0px;
+        z-index: -1;
+    }
+}
+
+section{
+
+    p.about{
+        font-size: 26px;
+        color: #b2c4d3;
+        padding: 21px 0;
+        line-height: 1.5;
+    }
+        .contact-btn{
+            background: #664b8b;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: white;
+            transition: all .3s;
+            &:hover{
+                background-color: #1c1c4b;
+                color: #f9a826;
+            }
+        }
+
+}
+
+.h-card{
+    border: none;
+    background-color: transparent !important;
+    color: #fff;
+    .card-body{
+
+        .skill-item{
+            margin-top: 10px;
+            h2{
+                color: #b2cda2;
+                margin-top: 20px;
+                i{
+                    font-size: 20px;
+                }
+                &+div{
+                    
+                    padding-left: 35px;
+                    &>p{
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                    }
+     
+                }
+            }
+        }
+        
+        li{
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            border: none;
+            background: #3e509d;
+            padding: 18px 16px 3px;
+            border-radius: 12px;
+            margin-top: 25px;
+            box-shadow: 0px 0px 4px 5px #2f327bb0;
+        }
+        .list-edu{
+            border-left: 2px solid;
+            border-radius: 0;
+            padding-left: 40px;
+            display: flex;
+            position: relative;
+            li{
+                &::before{
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    background: #2e3d79;
+                    position: absolute;
+                    left: -61px;
+                    top: 38%;
+                    border-radius: 50%;
+                }
+
+                &::after{
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: #ffffff;
+                    position: absolute;
+                    left: -51px;
+                    top: 45%;
+                    border-radius: 50%;
+                }
+
+
+
+                .media{
+                    display: flex;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                    }
+                    img{
+                        width: 110px;
+                        height: 110px;
+                        margin-right: 24px;
+                        border-radius: 6px;
+                    }
+                    .media-body{
+                        .link{
+                            color: #ffffff;
+                            display: inline-block;
+                            margin-right: 6px;
+                            text-decoration: none;
+                            background: #8489b1;
+                            padding: 5px 8px;
+                            border-radius: 4px;
+                            min-width: 95px;
+                        }
+                    }
+                }
+            }
+        
+
+           
+            
+        }
+        p.about{
+            font-size: 21px;
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+            padding: 20px 0px;
+        }
+    }
+}
+
+
+.tech{
+    color: #ffffff;
+    margin-right: 20px;
+    position: relative;
+    background: #6d6d6d;
+    padding: 6px 10px;
+    border-radius: 14px;
+    line-height: 1px;
+    font-size: 15px;
+    &:last-of-type::after{
+        content: unset;
+    }
+     &::after {
+      
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: #bdb7c5;
+        right: -17px;
+        position: absolute;
+        border-radius: 10px;
+        bottom: 11px;
+    }
+}

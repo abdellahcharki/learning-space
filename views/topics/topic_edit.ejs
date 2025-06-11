@@ -1,0 +1,96 @@
+<%- include("../components/header.ejs") %>
+    <%- include("../components/navbar.ejs") %>
+        <style>
+            .ce-block__content,
+            .ce-toolbar__content {
+                max-width: unset;
+
+            }
+
+            #editor {
+                padding: 20px 60px;
+            }
+        
+        </style>
+
+
+<section class="sec-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form  method="post" action="/topics/edit"  class="col-12">
+                    <h2 class="mt-3">Edit Topic</h2>
+                    <button type="submit"  class="btn act-btn float-end">save</button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"><i class="fas fa-home    "></i></a></li>
+                            <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">new</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                    <div class="form-group content-title">
+                        <label for="">Titel</label>
+                        <input type="text" class="form-control" name="title"  value="<%= t.title %>"   placeholder="here title">
+                            <input type="hidden" id="body" value="<%= t.body %>" name="body">
+                            <input type="hidden" id="body" value="<%= t.id %>" name="id">
+    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section class="container">
+            <divclass="row">
+           
+
+                <div class="col-12">
+                    <div id="editor"></div>
+                </div>
+
+
+            </divclass=>
+        </section>
+
+
+
+
+
+        <%- include("../components/editor.ejs") %>
+        <%- include("../components/footer.ejs") %>
+
+            <script type="module">
+ 
+                const editor = new EditorJS({
+                    
+                    holder: "editor",
+                    placeholder: 'Let`s write an awesome story!',
+                    tools: editorTools,
+                    onReady: () => {  
+                         var json = JSON.parse(document.getElementById("body").value);
+                         editor.render( json )
+                        
+                    } ,
+                    onChange: (api, event) => {
+                        editor.save().then((data) => {
+                          
+                       
+                        document.getElementById("body").value = JSON.stringify(data)  ;
+                      
+                    })
+
+                        }
+                });
+
+               
+
+            
+
+
+            </script>
+
+
+    

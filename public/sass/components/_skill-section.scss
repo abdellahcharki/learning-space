@@ -1,0 +1,25 @@
+.skill-section{
+    font-family: Poppins, sans-serif;
+    padding-bottom: 0;
+
+    .card-wraper{
+        padding: 10px;
+        .card{
+            width: 100%;
+            background: #111233;
+            padding: 19px;
+            border-radius: 10px;
+            .card-img-wraper{
+                padding: 50px 50px 20px;
+                text-align: center;
+            }
+            .card-title{
+                text-align: center;
+            }
+            .card-text{
+                color: #8495a1;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+<%- include("components/header.ejs") %>
+    <%- include("components/navbar.ejs") %>
+ 
+    <style>
+        .editor{
+            border: none !important;
+            font-size: 1rem;
+        }
+        #editor{
+            border: none !important;
+        }
+        .ql-toolbar{
+            border: none !important;
+        }
+    </style>
+ 
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mt-3">Cours Name</h2>
+                <button id="pub" class="btn act-btn float-end">Publish</button>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+                  <hr>
+                  <div class="form-group content-title">
+                    <label for="">Titel</label>
+                    <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="here title">
+
+                  </div>
+            </div>
+
+            <div class="col-12 mt-3">
+                <div id="editor"></div>
+            </div> 
+
+            
+        </div>
+    </section>
+
+    <script>
+        
+                const quill = new Quill('#editor', {
+                    theme: 'snow',
+                    modules: {
+                            'syntax': true,
+                            'toolbar': [
+                            [ { 'size': [] }],
+                            [ 'bold', 'italic', 'underline', 'strike' ],
+                            [{ 'color': [] }, { 'background': [] }],
+                            [{ 'script': 'super' }, { 'script': 'sub' }],
+                            [{ 'header': '1' }, { 'header': '2' }, 'blockquote', 'code-block' ],
+                            [{ 'list': 'ordered' }, { 'list': 'bullet'}, { 'indent': '-1' }, { 'indent': '+1' }],
+                            [ 'direction', { 'align': [] }],
+                            [ 'link', 'image', 'video', 'formula' ],
+                            [ 'clean' ]
+                            ]
+                    },
+
+                    placeholder: 'Compose an epic...',
+                });
+
+
+
+                
+
+                document.getElementById("pub").addEventListener("click",()=>{
+                    console.log(quill.root.innerHTML);
+                })
+            
+    </script>
+
+
+
+ 
+<%- include("../components/editor.ejs") %>
+
+        <%- include("components/footer.ejs") %>

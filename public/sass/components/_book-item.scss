@@ -1,0 +1,130 @@
+
+.books-search{
+    background: #ebe6e6;
+    padding: 5px 0 5px 13px;
+    border-radius: 9px;
+    display: flex;
+    font-weight: 300;
+    flex-grow: 1;
+    .search-form{
+        min-width: 200px;
+        display: flex;
+        flex-grow: 0;
+        padding: 0 6px  ;
+        &:not(:last-of-type){
+            border-right: 1px solid #978989;
+        }
+        &:last-of-type{
+            min-width: unset;
+            max-width: 122px !important;
+            flex-grow: 0;
+            button{
+                border: none;
+                background-color: #3e719b;
+                border-radius: 6px;
+                outline: none;
+                color: #fff;
+                padding: 0px 18px;
+            }
+        }
+        label{
+            line-height: 25px;
+            padding: 5px;
+        }
+       
+        input,select{
+            background-color: transparent;
+            border: none;
+            outline: none;
+ 
+            flex-grow: 1;
+        }
+        &.text-search{
+            flex-grow: 1;
+            padding: 0 10px 0 0;
+             
+            input{
+                flex-grow: 1;
+            }
+        }
+
+    }
+   
+}
+
+.book-item{
+    height: 200px;
+    display: flex;
+    margin-top: 20px;
+    padding: 8px;
+    box-shadow: 0px 0px 12px 0px #0000002b;
+    border-radius: 6px;
+    border: 1px solid #c9c9c9;
+    .media-body{
+        padding: 15px;
+        flex-grow: 1;
+        img{
+            border: 1PX solid #000;
+        }
+        h6{
+            width: 100%;
+            direction:initial ;
+        }
+        .book-infos{
+            font-size: 13px;
+            span{
+                margin-right: 20px;
+                display: inline-block;
+                position: relative;
+                &:not(:last-of-type)::after{
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    content: "";
+                    border: 2px solid #000000b4;
+                    border-radius: 50%;
+                    top: 40%;
+                    right: -13px;
+                }
+            }
+        }
+        .author{
+            margin: 0;
+            font-size: 13px;
+            margin-top: 7px;
+            .label{
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+.addbook{
+    &>div{
+        display: block;
+    }
+    .form-group{
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        border-radius: 6px;
+        display: flex;
+        label{
+            background-color: #ddd;
+            width: 120px;
+            padding: 7px;
+        }
+        input, select{
+            border: none;
+            flex-grow: 1;
+            padding: 7px 20px;
+        }
+    }
+}
+
+
+
+ .nobook{
+    text-align: center;
+    padding-top: 60px;
+ }

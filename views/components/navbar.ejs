@@ -1,0 +1,38 @@
+<header  >
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand" href="/"><img height="38" src="/img/logo.png" alt=""></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
+                    <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="/topics">Topics</a></li>  
+                    <li class="nav-item"><a class="nav-link" href="/notes">Notes</a></li>  
+                    <li class="nav-item"><a class="nav-link" href="/books">Books</a></li> 
+
+                </ul>
+            </div>
+            <div class="rightnav">
+               <div  class="dropdown">
+                  <button class="btn btn-secondary float-end act-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"  >  <%= mail %> </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item"  > Edit </a></li>
+                    <form method="post" action="/auth/logout" class="navbar-nav mr-auto mt-2 mt-lg-0">
+                         
+                        <button type="submit" class="logoutbtn btn btn-danger">Log out</button>
+                   </form>
+                   
+  
+          
+                  </ul>
+                </div>
+  
+            </div>
+        </div>
+    </nav>
+
+</header>

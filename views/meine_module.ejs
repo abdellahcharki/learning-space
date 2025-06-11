@@ -1,0 +1,79 @@
+<%- include("components/header.ejs") %>
+    <%- include("components/navbar.ejs") %>
+
+
+        <section class="container">
+            <div class="col-12">
+                <h2 class="mt-3">Meine Module</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home    "></i></a></li>
+ 
+                        <li class="breadcrumb-item active" aria-current="page">Meine Module </li>
+                    </ol>
+                </nav>
+                <hr />
+                 
+            </div>
+            <div class="col-12">
+                <table class="mtable table mt-4">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Credits</th>
+                            <th>Semester</th>
+                            <th>Bereich</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+ 
+                        <tr>
+                            <td>{ el.no }</td>
+                            <td>{ el.name }</td>
+                            <td> { el.credits } LP </td>
+                            <td>{el.semister.semister}</td>
+                            <td>{el.bereiche.bereich}</td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td>{ el.no }</td>
+                            <td>{ el.name }</td>
+                            <td> { el.credits } LP </td>
+                            <td>{el.semister.semister}</td>
+                            <td>{el.bereiche.bereich}</td>
+                        </tr>
+
+
+
+
+                        <tr>
+                            <td>{ el.no }</td>
+                            <td>{ el.name }</td>
+                            <td> { el.credits } LP </td>
+                            <td>{el.semister.semister}</td>
+                            <td>{el.bereiche.bereich}</td>
+                        </tr>
+
+
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <%- include("components/footer.ejs") %>

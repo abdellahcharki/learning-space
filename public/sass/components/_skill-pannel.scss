@@ -1,0 +1,29 @@
+.skill-card{
+    background-color: #7f7f8f;
+    width: 100%;
+    padding: 15px;
+    border-radius: 13px;
+    display: flex;
+    margin-top: 15px;
+    color: #f1f1f1;
+    .skill-icon{
+        width: 172px;
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        height: 63px;
+    }
+    .skill-content{
+        padding-left: 10px;
+        .skill-title{
+            font-size: 21px;
+            font-weight: 700;
+
+        }
+        .skill-body{
+            line-height: 19px;
+            font-family: Poppins, sans-serif;
+
+        }
+    }
+}

@@ -1,0 +1,79 @@
+<%- include("../components/header.ejs") %>
+    <%- include("../components/navbar.ejs") %>
+        <style>
+            .ce-block__content,
+            .ce-toolbar__content {
+                max-width: unset;
+
+            }
+
+            #editor {
+                padding: 20px 60px;
+            }
+        
+        </style>
+
+        <section class="container">
+            <div class="row mt-4">
+                <form  method="post" action="/courses/content/edit"  class="col-12">
+                    <!-- <h2 class="mt-3">Edit Topic</h2> -->
+                    <button type="submit"  class="btn act-btn float-end">save</button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"><i class="fas fa-home    "></i></a></li>
+                            <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
+                            <li class="breadcrumb-item"><a href="/courses/<%= c.course.id %>"><%= c.course.name %></a></li>
+                            <li class="breadcrumb-item"><a href="/courses/<%= c.course.id %>/<%= c.id%>"><%= c.title %></a></li>
+                            <li class="breadcrumb-item active" aria-current="page">edit</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                    <div class="form-group content-title">
+                        <label for="">Titel</label>
+                        <input type="text" class="form-control" name="title"  value="<%= c.title %>"   placeholder="here title">
+                            <input type="hidden" id="body" value="<%= c.body %>" name="body">
+                            <input type="hidden" id="body" value="<%= c.id %>" name="id">
+                            <input type="hidden" value="<%= c.course.id %>" name="cid" id="">
+
+                    </div>
+                </form>
+
+                <div class="col-12">
+                    <div id="editor"></div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <%- include("../components/editor.ejs") %>
+        <%- include("../components/footer.ejs") %>
+     
+            <script type="module">
+ 
+                const editor = new EditorJS({
+                    
+                    holder: "editor",
+                    placeholder: 'Let`s write an awesome story!',
+                    tools:editorTools,
+                    onReady: () => {  
+                         var json = JSON.parse(document.getElementById("body").value);
+                         editor.render( json )
+                    } ,
+                    onChange: (api, event) => {
+                        editor.save().then((data) => {
+                        document.getElementById("body").value = JSON.stringify(data)  ;
+                      
+                    })
+
+                        }
+                });
+            </script>
+
+
+    

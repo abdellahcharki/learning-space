@@ -1,0 +1,64 @@
+<%- include("../components/header.ejs") %>
+    <%- include("../components/navbar.ejs") %>
+ 
+
+    <section class="sec-header">
+        <div class="container">
+                  
+        <div class="col-12">
+            <h2 class="page-title">Courses</h2>
+            <a href="/courses/new" class="btn act-btn float-end">new Cours</a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                   <li class="breadcrumb-item active" aria-current="page">Tutorial</li>
+                </ol>
+              </nav>
+               
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="container">
+        <div class="row">
+
+
+
+
+            <%   for(let cours of courses) {%>
+                <div class="col-4">
+                    <a class="card cours-card" href="/courses/<%= cours.id %>">
+                        <img class="card-img-top" src="<%= cours.imgUrl %>" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title"><%= cours.name %></h6>
+                        </div>
+                    </a>
+                </div>
+    
+
+            <% } %>
+
+            <% if(courses.length <=0) {%>
+                <div class="nodata pt-5 col-12 text-center">
+                    <img width="400" src="/img/nodata.svg" alt="">
+                    <h1 class="mt-4">You don't have any Cours ?</h1>
+                    <h3 class="mt-4">Let's create one !</h3>
+                    <a href="/courses/new" class="btn mt-4 act-btn  ">Create Cours</a>
+ 
+                </div>
+            <% } %>
+
+
+            
+        </div>
+    </section>
+
+
+
+
+ 
+
+    <%- include("../components/footer.ejs") %>

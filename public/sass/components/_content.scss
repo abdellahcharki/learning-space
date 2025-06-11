@@ -1,0 +1,103 @@
+.content{
+    font-size: 1rem;
+    padding: 9px 27px;
+  
+    h1,h2,h3,h4,h5,h6{
+        font-family: "Rubik";
+        margin: 19px 0px;
+        font-weight: 450;
+     
+    }
+
+    blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+      }
+     
+      pre{
+         padding:  40px 20px 20px !important;
+        border-radius: 15px;
+         position: relative; 
+        .codetools{
+          position: absolute;
+          top:0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          background: #4e4d6d;
+          height: 30px;
+          .lang{
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            top: 0;
+            border-bottom-left-radius: 20px;
+            color: #e3c9c9;
+            font-size: 14px;
+            padding: 5px 23px;
+          }
+          .copycode{
+            float: right;
+            padding: 5px 10px;
+          }
+        }
+        
+        code[class*="language-"], pre[class*="language-"]{
+          color: rgb(243 235 116);
+        }
+      }
+      .katex{
+        display: block;
+        margin: 20px 0;
+      }
+      .fig-img{
+        margin: 15px auto;
+        max-width: 100%;
+      overflow: hidden;
+      text-align: center;
+    img{
+        max-width: calc(100% - 100px); 
+    }
+    }
+
+    .delimiter{
+      line-height: 1.6em;
+      width: 100%;
+      text-align: center;
+      &:before {
+        display: inline-block;
+        content: "***";
+        font-size: 30px;
+        line-height: 65px;
+        height: 30px;
+        letter-spacing: .3em;
+    }
+    }
+    .warning{
+      background-color: #eaf5803d;
+      margin: 1.5rem 0;
+      border-left: 7px solid #dbcb27;
+      display: flex;
+      h4{
+        margin-bottom: 0;
+      }
+      .w-icon{
+        font-size: 30px;
+        padding: 30px 40px;
+        color: #dbcb27;
+      }
+    }
+}
+
+
+
+.mermaid-wraper{
+  text-align: center;
+ 
+  p{
+    margin-top:10px
+  }
+}

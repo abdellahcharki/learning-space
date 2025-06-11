@@ -1,0 +1,80 @@
+<%- include("components/header.ejs") %>
+    <%- include("components/navbar.ejs") %>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-title"><%= modul.name %></h2>
+              
+                <div class="dropdown">
+                    <button class="btn btn-secondary float-end act-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"  >  actions </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item"  href="/courses"> Edit </a></li>
+                      <li><a class="dropdown-item" href="#">Delete</a></li> 
+                    </ul>
+                  </div>
+
+
+
+                <nav aria-label="breadcrumb"   >
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/"><i class="fas fa-home    "></i></a></li>
+                      <li class="breadcrumb-item"><a href="/courses">Modulangebot</a></li>
+                     
+                      <li class="breadcrumb-item active" aria-current="page"> <%= modul.name %></li>
+                    </ol>
+                  </nav>
+                  <hr>                  
+                  <p class="create_datum"> <i class="fas fa-info-circle    "></i> <span class="text-dark bold"><strong>Last updated</strong></span> <%= moment( modul.updatedAt).format(' Do MMMM YYYY, HH:mm:ss ')  %></p>
+
+            </div>  
+            <div class="col-12 content" id="content">
+          
+                <table class=" ">
+               
+                    <tbody>
+                        <tr> 
+                            <td>Modulname</td>
+                            <td><%= modul.name %></td>
+                        </tr>
+                        <tr> 
+                            <td>NO.</td>
+                            <td><%= modul.no %></td>
+                        </tr>
+                        <tr> 
+                            <td>credits</td>
+                            <td><%= modul.credits %> LP</td>
+                        </tr>
+                        <tr> 
+                            <td>semister</td>
+                            <td><%= modul.semister.semister %>  </td>
+                        </tr>
+                        <tr> 
+                            <td>bereiche</td>
+                            <td><%= modul.bereiche.bereich %>  </td>
+                        </tr>
+                        <tr> 
+                            <td>Beschreibung</td>
+                            <td id="beschreibung">  </td>
+                             
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <textarea  class="d-none"  type="hidden"  id="body"><%- modul.beschreibung %></textarea>
+            
+        </div>
+    </section>
+
+    <%- include("components/footer.ejs") %>
+
+<script  type="module">
+    //const parser = new edjsParser();
+    
+ var data = JSON.parse(document.getElementById("body").value);
+     
+     var c  = parser.parse(data);
+  
+    
+     document.getElementById("beschreibung").innerHTML =  myParser(data); 
+ </script>

@@ -1,0 +1,97 @@
+.header{
+    text-align: center;
+    .myphoto{
+        border: 3px solid #ffc83d;
+        border-radius: 15px;
+        transform: rotate(357deg);
+        box-shadow: 10px 10px 0px 5px #131935;
+    }
+
+    
+.my-name{
+    font-weight: 900;
+    font-size: 74px;
+    color: $orang!important;
+    text-align: center;
+    font-family: 'Poppins';
+    .dis{
+        display: flex;
+        img{
+            width: 43%;
+            &.img-r{
+                transform: scaleX(-1);
+            }
+        }
+     
+        .icon{
+            font-size: 88px;
+        }
+    }
+    span{
+        font-weight: 200;
+    font-size: 28px;
+    display: block;
+    color: #ddd;
+    }
+}
+
+
+
+    .nav-link{
+        background: #515972;
+        padding: 5px 20px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.14);
+        border-radius: 33px;
+        margin-right: 21px;
+        display: inline-block;
+        font-size: 17px;
+        transition: all 0.5s;
+        line-height: 30px;
+    
+        &:hover{
+            background: $orang;
+            box-shadow: none; 
+            color:#000
+        }
+     
+    }
+}
+
+
+.navbar{
+    background: #ffffff;
+    color: #000;
+    font-family: sans-serif;
+    box-shadow: 5px 0px 18px 0px #0000004a;
+    line-height: 32px;
+    border-bottom: 3px solid #ad57d4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    padding: 0;
+    .navbar-brand{
+        background: #ede0e0;
+        padding: 11px 56px;
+        position: relative;
+        margin-right: 83px;
+        &::after{
+            content: "";
+            position: absolute;
+            border: 30px solid #ede0e0;
+            top: 0;
+            right: 0;
+            transform: translateX(100%);
+            border-right-color: transparent;
+            border-top-color: transparent;
+        }
+    }
+    .rightnav{
+
+        padding: 0px 20px;
+
+
+   
+    }
+}

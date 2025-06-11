@@ -1,0 +1,88 @@
+<%- include("../components/header.ejs") %>
+    <%- include("../components/navbar.ejs") %>
+
+
+    <section class="sec-header d-none">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" src="http://localhost:8040/file_1736981386.webp" alt="">
+          </div>
+          <div class="col-10">
+             
+            <h2 class="page-title"><%= t.title %></h2>
+            
+       
+            <form method="post" action="/" class="dropdown">
+              <input type="hidden" name="_method" value="delete">
+                <button class="btn btn-secondary float-end act-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"  >  actions </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  href="/topics/<%= t.id %>/edit"> Edit </a></li>
+                  <li><button type="submit" class="dropdown-item"  >Delete</button></li> 
+                  <li><button type="button" class="dropdown-item"  onclick="downloadPDF()" >dwonload</button></li> 
+                  <li><button type="button" class="dropdown-item"  onclick="_pdf()" >PDF</button></li> 
+
+                  <input type="hidden" name="entity" value="Topic">
+                  <input type="hidden" name="id" value="<%= t.id %>">
+                </ul>
+              </form>
+
+              
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="/topics">Topics</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><%= t.title %></li>
+                  <input type="hidden" id="title" value="<%= t.title %>">
+                </ol>
+              </nav>
+              <hr>
+              <!-- <img class="card-img-top" src="http://localhost:8040/file_1736981386.webp" alt=""> -->
+              <p class="create_datum"> <i class="fas fa-info-circle    "></i> <span class="text-dark bold">Last updated</span> <%= moment( t.updatedAt).format(' Do MMMM YYYY, HH:mm:ss ')  %></p>
+        </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="container">
+        <div class="row">
+
+          <div class="col-12">
+            <h1 class="  hpage-title"  ><%= t.title %></h1>
+          </div>
+
+            <div class="col-12"> 
+                <textarea  class="d-none"  id="body"><%= t.body %></textarea>
+                <div class="content" id="content">
+                  
+                </div>
+                
+            </div> 
+
+            <div class="row">
+
+            <div class="col-12">
+              <hr>
+              <p class="create_datum text-dark d-inline-block"> <i class="fas fa-info-circle    "></i> <span class="text-dark bold">Last updated</span> <%= moment( t.updatedAt).format(' Do MMMM YYYY, HH:mm:ss ')  %></p>
+              <button type="button" class=" ml-1 btn-secondary float-end"   >Download <i class="fas fa-download    "></i></button>
+              <a type="button" class="  float-end ml-1"   href="/topics/<%= t.id %>/edit" >Edit</a>
+            </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <%- include("../components/editor.ejs") %>
+    <%- include("../components/footer.ejs") %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script  type="module"> 
+        var data = JSON.parse(document.getElementById("body").value);
+         document.getElementById("content").innerHTML = myParser(data); 
+     
+      
+ </script>
