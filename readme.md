@@ -21,7 +21,7 @@
 | Backend    | Express.js, EJS  |
 | Frontend   | React.js         |
 | Database   | MySQL            |
-| Styling    | CSS / Bootstrap (optional) |
+| Styling    | CSS / Bootstrap  |
 | Runtime    | Node.js          |
 
 ---
@@ -31,17 +31,26 @@
 learning-space/
 │
 ├── client/ # React frontend
-├── server/ # Express.js + EJS backend
-│ ├── routes/
-│ ├── views/
-│ ├── controllers/
-│ └── models/
-├── books/ # Ignored folder (e.g., book files)
-├── .env # Environment variables (not committed)
+│ ├── public/
+│ ├── src/
+│ ├── package.json
+│ └── ...
+│
+├── server/ # Express backend with EJS templates
+│ ├── controllers/ # Route logic
+│ ├── models/ # Database models
+│ ├── routes/ # Express routes
+│ ├── views/ # EJS templates
+│ ├── app.js # Express app entry point
+│ ├── package.json
+│ └── ...
+│
+├── books/ # Folder for books files (ignored by Git)
+├── stor/ # Folder for books files (ignored by Git)
+├── .env # Environment variables (ignored)
 ├── .gitignore
-├── package.json
-└── README.md
-
+├── README.md
+└── package.json # 
 ---
 
 Let me know if you'd like to include database schema setup or sample screenshots!
